@@ -167,7 +167,7 @@ const cacheResult = (cache) =>
   window.localStorage.setItem("pokes", JSON.stringify(cache));
 
 // INITIAL RENDER
-fetch("https://pokeapi.co/api/v2/pokemon?limit=9&offset=256")
+fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
   .then((response) => response.json())
   .then((data) => {
     cacheResult(data.results);

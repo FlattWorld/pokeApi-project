@@ -150,4 +150,27 @@ span {
     height: 180px;
     font-size: 14px;
   }
+  .modal {
+    width: 85%;
+    padding: 12px 32px 12px 8px;
+  }
+}
+
+/* 
+END OF PROYECT REQUISITES
+END OF PROYECT REQUISITES
+END OF PROYECT REQUISITES
+END OF PROYECT REQUISITES
+END OF PROYECT REQUISITES
+END OF PROYECT REQUISITES
+*/
+
+.footer {
+  margin-top: 24px;
+  background-color: #060b38;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+  text-align: center;
 }

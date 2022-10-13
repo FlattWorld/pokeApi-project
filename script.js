@@ -209,3 +209,19 @@ form.onsubmit = (e) => {
       });
   }
 };
+
+//
+//
+//
+//
+//
+//
+
+// FOOTER NOT NECESSARY
+
+const footer = creatEl('footer');
+footer.classList.add('footer');
+footer.innerHTML = `<nav>
+PokeAPI practice project, FlattWorld&copy;, All Rights Reserved
+</nav>`
+root.appendChild(footer)

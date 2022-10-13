@@ -14,6 +14,10 @@
   align-items: center;
   justify-content: center;
 }
+main {
+  margin-bottom: 120px;
+  min-height: 60vh;
+}
 
 .pokemon-list {
   display: flex;
@@ -166,7 +170,7 @@ END OF PROYECT REQUISITES
 */
 
 .footer {
-  margin-top: 24px;
+  width: 100%;
   background-color: #060b38;
   color: white;
   display: flex;

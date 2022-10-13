@@ -1,6 +1,8 @@
 ## PokeAPI Practice Project
 ![](./assets/initial-design.png)
 
+## [Live Demo](https://flattworld.github.io/pokeApi-project/)
+
 ## Introduction
 
 Hello FlattWorldnian, in this exercise you will need to create the webpage designed [Here](https://www.figma.com/file/ReiOBlB6ixtZEK8PCagTlP/pokeApi?node-id=0%3A1) using only Javascript and CSS!

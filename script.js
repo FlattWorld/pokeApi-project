@@ -19,16 +19,18 @@ head.appendChild(img);
 
 
 
-const pokemonContainer = document.querySelector("#divp")
+// const pokemonContainer = document.querySelector("#divp")
+
+
 function fetchPokemon(id)
 {
-fetch('https://pokeapi.co/api/v2/pokemon/${id}/')
+fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
 .then((res)=> res.json())
 .then((data) => createPokemon(data));
 }
 function fetchPokemons(number)
 {
-    for(const i = 1 ; i <= number;i++)
+    for(let i = 1 ; i <= number;i++)
     fetchPokemon(i)
 }
 
@@ -54,11 +56,11 @@ function createPokemon (pokemon)
             div1.appendChild(btn)
 
             const imgp = document.createElement("img")
-            imgp.src = pokemon.sprites.front_defaul            
+            imgp.src = pokemon.sprites.front_default            
             div1.appendChild(imgp)
 
-            const number =document-createElement("p")
-            number.textContent = '#${pokemon.id.toString(.padStart(3,0))}';
+            const number =document.createElement("p")
+            number.textContent = `#${pokemon.id.toString().padStart(3,0)}`
 
             const name = document.createElement("p")
             name.id="name"
@@ -68,11 +70,11 @@ function createPokemon (pokemon)
             div1.appendChild(name)
             div1.appendChild(name)
 
-            pokemonContainer.appendChild(div1)
+            // pokemonContainer.appendChild(div1)
 
             
 }
-fetchPokemons(13);
+fetchPokemons(138);
 
 
 

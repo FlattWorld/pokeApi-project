@@ -49,11 +49,7 @@ function createPokemon (pokemon)
             div.appendChild(div1)
 
                 
-            const btn = document.createElement("input")
-            btn.type="button"
-            btn.value="DETALLES"
-            btn.id="btn"
-            div1.appendChild(btn)
+            
 
             const imgp = document.createElement("img")
             imgp.src = pokemon.sprites.front_default            
@@ -65,7 +61,13 @@ function createPokemon (pokemon)
             const name = document.createElement("p")
             name.id="name"
             name.textContent= pokemon.name
-
+            
+            const btn = document.createElement("input")
+            btn.type="button"
+            btn.value="DETALLES"
+            btn.id="btn"
+            
+            div1.appendChild(btn)
             div1.appendChild(imgp)
             div1.appendChild(name)
             div1.appendChild(name)
@@ -74,7 +76,18 @@ function createPokemon (pokemon)
 
             
 }
-fetchPokemons(138);
+fetchPokemons(151);
+
+const boton = document.querySelector("#btn")
+boton.onclick = function click()
+{
+const divt =document.createElement("div")
+divt.innerHTML="descripcion"
+divt.id ="targeta"
+
+
+
+}
 
 
 

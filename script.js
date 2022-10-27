@@ -52,11 +52,14 @@ function createPokemon (pokemon)
             
 
             const imgp = document.createElement("img")
-            imgp.src = pokemon.sprites.front_default            
+            imgp.src = pokemon.sprites.front_default 
+            imgp.id="imgp"
+
             div1.appendChild(imgp)
 
             const number =document.createElement("p")
             number.textContent = `#${pokemon.id.toString().padStart(3,0)}`
+            number.id="num"
 
             const name = document.createElement("p")
             name.id="name"
@@ -69,7 +72,7 @@ function createPokemon (pokemon)
             
             div1.appendChild(btn)
             div1.appendChild(imgp)
-            div1.appendChild(name)
+            div1.appendChild(number)
             div1.appendChild(name)
 
             // pokemonContainer.appendChild(div1)
@@ -78,7 +81,7 @@ function createPokemon (pokemon)
 }
 fetchPokemons(151);
 
-const boton = document.querySelector("#btn")
+const boton = document.querySelector('#btn')
 boton.onclick = function click()
 {
 const divt =document.createElement("div")

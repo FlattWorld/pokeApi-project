@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    box-sizing: border-box;
 
   }
 #pokes
@@ -37,7 +38,7 @@
 }
 #divp
 {
-
+    
         margin: .04px;
         width: 150px;
         height: 150px;
@@ -46,30 +47,34 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: .2px;
-      
-
-
-
+        padding: 10px;
+  
 }
+
+
 
 #impg
 {
+    display: flex;
     height: 5px;
     width: 40px;
+    background-position: center;
+    
+
 }
 
 #btn
 {   
-    justify-items: end;
-    justify-content: end;
         display: flex;
         background-color: rgb(28, 214, 28);
         color:black;
         border-radius: 20px;
         width: 90px;
         height: 30px;
-        
+
+       
+  
+
 
 }
 #num
@@ -94,7 +99,26 @@ background-color: rgb(20, 179, 73);
 }
 #targeta
 {
+    justify-content: center;
+    align-items: centers;
     width: 200px;
     height: 100px;
     background-color: #060b38;
 }
+
+@media (max-width: 450px) 
+{
+    #divp{
+      margin: 12px;
+      gap: 12px;
+    }
+    .pokemon-list_item {
+      width: 150px;
+      height: 180px;
+      font-size: 14px;
+    }
+    .div1 {
+      width: 85%;
+      padding: 12px 32px 12px 8px;
+    }
+  }

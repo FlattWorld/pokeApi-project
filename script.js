@@ -25,7 +25,9 @@ head.appendChild(img);
 function fetchPokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => res.json())
+     
     .then((data) => createPokemon(data));
+   
 }
 function fetchPokemons(number) {
   for (let i = 1; i <= number; i++)
@@ -61,29 +63,60 @@ function createPokemon(pokemon) {
   div1.appendChild(imgp)
 
   const number = document.createElement("p")
-  number.textContent = `#${pokemon.id.toString().padStart(3, 0)}`
+  number.textContent = `#${ pokemon.name.toString() + pokemon.id.toString().padStart(3, 0) }`
   number.id = "num"
 
-  const name = document.createElement("p")
-  name.id = "name"
-  name.textContent = pokemon.name
+
 
 
   div1.appendChild(imgp)
   div1.appendChild(number)
-  div1.appendChild(name)
   div1.appendChild(btn)
-  // pokemonContainer.appendChild(div1)
-
-  // const boton = document.querySelector('.btn')
-  console.log(btn)
+  
   btn.onclick = function () {
 
-    console.log("click")
+    const overlay =document.createElement("div")
+    overlay.classList.add("overlay")
+
+
     const divt = document.createElement("div")
-    divt.innerHTML = "descripcion"
+    overlay.appendChild(divt)
     divt.id = "targeta"
-    document.body.appendChild(divt)
+    root.appendChild(overlay)
+
+    const number = document.createElement("p")
+    number.textContent = `#${pokemon.name + pokemon.id.toString().padStart(3, 0) }`
+    number.id = "num"
+
+    const name = document.createElement("p")
+    name.id = "name"
+    name.textContent = pokemon.name
+
+    const imgp = document.createElement("img")
+    imgp.src = pokemon.sprites.front_default
+    imgp.id = "imgp"
+
+    const tipo =document.createElement("p")
+    tipo.textContent= 
+    tipo.id="tipo"
+
+
+    
+    targeta.appendChild(number)
+    targeta.appendChild(imgp)
+    targeta.appendChild(tipo) 
+
+    const cbtn = document.createElement('button')
+    cbtn.innerText = 'x'
+    cbtn.id = "cbtn"
+   
+    cbtn.onclick = function () 
+    {
+      document.querySelector("#root").removeChild(overlay)
+
+    }
+         divt.appendChild(cbtn)
+
 
 
   }
@@ -91,7 +124,7 @@ function createPokemon(pokemon) {
 
 
 }
-fetchPokemons(151);
+fetchPokemons(60);
 
 
 

@@ -50,7 +50,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     gap: 2px;
 
 }
@@ -82,10 +82,15 @@
 
 #num {
 
-     height: 10px;
+    height: 10px;
     color: lightgoldenrodyellow;
     font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
+    font-size: 9px;
+
+}
+
+#num:first-letter {
+    text-transform: uppercase;
 }
 
 
@@ -94,25 +99,25 @@
 #btn:hover {
     background-color: rgb(20, 179, 73);
 }
-.overlay
-{
-position: fixed;
-left: 0;
-right: 0;
-bottom: 0;
-top: 0;
-display: flex;
-align-items: center;
-justify-content: center;
+
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
 }
 
 #targeta {
 
-    display:flex;
+    display: inline-flex;
     position: fixed;
-    justify-content: left;
+    flex-direction: column;
     align-items: center;
     border-radius: 5px;
     border-color: antiquewhite;
@@ -120,25 +125,57 @@ justify-content: center;
     width: 400px;
     height: 300px;
     background-color: #060b38;
+    gap: 10px;
 
 
 }
 
-#cbtn
-{
-    display:flex;
-    justify-content:right;
-    align-items:flex-start;
+
+#cbtn {
+  
+    position: fixed;
+    left: 870px;
+    right: 0;
+    bottom: 0;
+    top: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 30px;
     width: 30px;
     color: lightgrey;
     border-radius: 50px;
-    border:lightgrey;
+    border: lightgrey;
     font-size: 20px;
     border: 5px;
-    border-style:groove;
-    background-color:#060b38;
+    border-style: groove;
+    background-color: #060b38;
+    
+ 
 }
+
+#numTarget {
+    height: 20px;
+    color: lightgoldenrodyellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 19px;
+}
+
+#numTarget:first-letter {
+
+    text-transform: uppercase;
+
+}
+#carac ,#movi ,#tipo
+{
+    height: 20px;
+    color: lightgoldenrodyellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+
+
+
 
 @media (max-width: 450px) {
     #divp {

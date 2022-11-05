@@ -24,10 +24,12 @@ head.appendChild(img);
 
 function fetchPokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-    .then((res) => res.json())
-     
-    .then((data) => createPokemon(data));
-   
+    .then((res) => res.json()) 
+    
+    .then((data) => createPokemon(data)
+  
+    );
+  
 }
 function fetchPokemons(number) {
   for (let i = 1; i <= number; i++)
@@ -63,7 +65,7 @@ function createPokemon(pokemon) {
   div1.appendChild(imgp)
 
   const number = document.createElement("p")
-  number.textContent = `#${ pokemon.name.toString() + pokemon.id.toString().padStart(3, 0) }`
+  number.textContent = `${ pokemon.name.toString()+" " + "#"+pokemon.id.toString().padStart(3, 0) }`
   number.id = "num"
 
 
@@ -73,7 +75,8 @@ function createPokemon(pokemon) {
   div1.appendChild(number)
   div1.appendChild(btn)
   
-  btn.onclick = function () {
+  btn.onclick = function ()
+ {
 
     const overlay =document.createElement("div")
     overlay.classList.add("overlay")
@@ -84,28 +87,38 @@ function createPokemon(pokemon) {
     divt.id = "targeta"
     root.appendChild(overlay)
 
-    const number = document.createElement("p")
-    number.textContent = `#${pokemon.name + pokemon.id.toString().padStart(3, 0) }`
-    number.id = "num"
-
-    const name = document.createElement("p")
-    name.id = "name"
-    name.textContent = pokemon.name
+    const number = document.createElement("h1")
+    number.textContent = `${pokemon.name +" "+"#"+ pokemon.id.toString    ().padStart(3, 0) }`
+    number.id = "numTarget"
 
     const imgp = document.createElement("img")
     imgp.src = pokemon.sprites.front_default
-    imgp.id = "imgp"
+    imgp.id = "imgPoke"
 
-    const tipo =document.createElement("p")
-    tipo.textContent= 
-    tipo.id="tipo"
 
+    const caracter =document.createElement("h1")
+    caracter.textContent= "Caracteristicas"
+    caracter.id = "carac"
+
+    const movi =document.createElement("h1")
+    movi.textContent= "Movimientos"
+    movi.id = "movi"
+
+    const tipo =document.createElement("h1")
+    tipo.textContent = "Tipos"
+    tipo.id =  "tipo"
+   
+
+    
 
     
     targeta.appendChild(number)
     targeta.appendChild(imgp)
+    targeta.appendChild(caracter) 
+    targeta.appendChild(movi) 
     targeta.appendChild(tipo) 
-
+    
+    
     const cbtn = document.createElement('button')
     cbtn.innerText = 'x'
     cbtn.id = "cbtn"
@@ -115,11 +128,12 @@ function createPokemon(pokemon) {
       document.querySelector("#root").removeChild(overlay)
 
     }
-         divt.appendChild(cbtn)
+         overlay.appendChild(cbtn)
 
 
 
   }
+  
 
 
 

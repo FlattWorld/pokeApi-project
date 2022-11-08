@@ -1,0 +1,243 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+#pokes {
+    color: blueviolet;
+}
+
+#head {
+    background-color: rgb(68, 238, 25);
+    width: 100%;
+    height: 150px;
+
+}
+
+#img {
+    width: 300px;
+    margin: auto;
+    display: block;
+
+}
+
+#div1
+
+/*este div es el padre del contenido de las targetas pokemon go */
+    {
+
+    display: inline-flex;
+    margin-top: 40px;
+    margin-right: 35px;
+    margin-left: 35px;
+
+
+
+
+}
+
+#divp {
+
+    margin: .04px;
+    width: 150px;
+    height: 150px;
+    background-color: #060b38;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 2px;
+
+}
+
+
+
+#impg {
+    display: flex;
+    height: 5px;
+    width: 25px;
+    background-position: center;
+
+
+}
+
+#btn {
+    display: flex;
+    background-color: rgb(28, 214, 28);
+    color: black;
+    border-radius: 20px;
+    width: 90px;
+    height: 30px;
+
+
+
+
+
+}
+
+#num {
+
+    height: 10px;
+    color: lightgoldenrodyellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+
+}
+
+#num:first-letter {
+    text-transform: uppercase;
+}
+
+
+
+
+#btn:hover {
+    background-color: rgb(20, 179, 73);
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#targeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: antiquewhite;
+    border: 6px;
+    width: 400px;
+    height: 300px;
+    background-color: #060b38;
+    gap: 40;
+
+
+
+}
+
+#imgp,
+#imgpb {
+    height: max-content;
+}
+
+
+#cbtn {
+
+
+
+    align-items: flex-start;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    color: lightgrey;
+    border-radius: 50px;
+    border: lightgrey;
+    font-size: 20px;
+    border: 2px;
+    border-style: solid;
+    background-color: #060b38;
+
+
+}
+
+#numTarget {
+    width: 100%;
+    height: 20px;
+    color: lightgoldenrodyellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 19px;
+}
+
+#numTarget:first-letter {
+
+    text-transform: uppercase;
+
+}
+
+#caracter,
+#movi,
+#tipo {
+    height: 20px;
+    color: lightgoldenrodyellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+
+#caracteristicas {
+    background-color: coral;
+    font-size: 20px;
+}
+
+#peso,
+#altura {
+
+    color: lightgoldenrodyellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+
+#Total {
+
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+#heads 
+{
+    display: flex;
+    align-self: stretch;
+}
+
+#izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+
+}
+
+#Derecha {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+@media (max-width: 450px) {
+    #divp {
+        width: 50px;
+        height: 50px;
+        margin: 12px;
+        gap: 12px;
+    }
+
+    .pokemon-list_item {
+        width: 150px;
+        height: 180px;
+        font-size: 14px;
+    }
+
+    .div1 {
+        width: 85%;
+        padding: 12px 32px 12px 8px;
+    }
+}

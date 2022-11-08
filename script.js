@@ -87,36 +87,85 @@ function createPokemon(pokemon) {
     divt.id = "targeta"
     root.appendChild(overlay)
 
+    const header = document.createElement("header")
+    header.id="heads"
+
+
+
+
     const number = document.createElement("h1")
     number.textContent = `${pokemon.name +" "+"#"+ pokemon.id.toString    ().padStart(3, 0) }`
     number.id = "numTarget"
+
+    targeta.appendChild(header)
+    header.appendChild(number)
+
+    const  divT =document.createElement("div")
+    divT.id="Total"
+    divt.appendChild(divT)
+
+    const divI =document.createElement("div")
+    divI.id="izquierda"
+    divT.appendChild(divI)
+    
+
+    const caracter = document.createElement("p")
+    caracter.textContent= "caracteristicas"
+    caracter.id="caracter"
+  
+    const peso = document.createElement("p")
+    peso.textContent= `${"Peso:  "+pokemon.weight+"      "+"Altura:"+pokemon.height}`
+    peso.id="peso"
+
+
+    const movi =document.createElement("h1")
+    movi.textContent= "Movimientos"
+    movi.id="movi"
+
+    const tipo =document.createElement("p")
+    tipo.textContent = "Tipos"
+    tipo.id= "tipo"
+   
+
+    divI.appendChild(caracter)
+    divI.appendChild(peso)
+    divI.appendChild(movi)
+    divI.appendChild(tipo)
+
+    const divD =document.createElement("div")
+    divD.id="Derecha"
+    divT.appendChild(divD)
 
     const imgp = document.createElement("img")
     imgp.src = pokemon.sprites.front_default
     imgp.id = "imgPoke"
 
+    const imgpb = document.createElement("img")
+    imgpb.src = pokemon.sprites.back_default
+    imgpb.id = "imgPokeb"
 
-    const caracter =document.createElement("h1")
-    caracter.textContent= "Caracteristicas"
-    caracter.id = "carac"
+    divD.appendChild(imgp)
+    divD.appendChild(imgpb)
+    
 
-    const movi =document.createElement("h1")
-    movi.textContent= "Movimientos"
-    movi.id = "movi"
 
-    const tipo =document.createElement("h1")
-    tipo.textContent = "Tipos"
-    tipo.id =  "tipo"
+
+    
+
    
 
+
+   //const movimie = document.createElement("p")
+    //const map1 = pokemon.moves.map[1,3]((el)=>el.move)
+    //movimie.textContent =  `${map1}`
+    //movimie.id="movis" 
+
     
 
     
-    targeta.appendChild(number)
-    targeta.appendChild(imgp)
-    targeta.appendChild(caracter) 
-    targeta.appendChild(movi) 
-    targeta.appendChild(tipo) 
+   
+    //targeta.appendChild(movimie)
+    
     
     
     const cbtn = document.createElement('button')
@@ -128,7 +177,7 @@ function createPokemon(pokemon) {
       document.querySelector("#root").removeChild(overlay)
 
     }
-         overlay.appendChild(cbtn)
+         header.appendChild(cbtn)
 
 
 
@@ -138,7 +187,7 @@ function createPokemon(pokemon) {
 
 
 }
-fetchPokemons(60);
+fetchPokemons(1);
 
 
 

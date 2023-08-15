@@ -89,7 +89,7 @@ const openModal = (poke) => {
   movesContainer.appendChild(moves);
   typesContainer.appendChild(types);
 
-  fillChars({ hight: poke.height, weight: poke.weight }, charsContainer);
+  fillChars({ height: poke.height, weight: poke.weight }, charsContainer);
   fillData(
     poke.moves.map((el) => el.move),
     movesContainer
